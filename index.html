@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Himanshu Injection Molding</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <meta name="description" content="Injection molding, repair and automotive components for two-wheelers and cars. Owned by Anshu Kumar." />
+
+  <style>
+    :root {
+      --primary:#1f4788;
+      --accent:#ffb400;
+      --bg:#f0f4f9;
+      --radius:14px;
+      --shadow:0 20px 40px rgba(31,71,136,0.08);
+      --text:#1d2939;
+      --muted:#6e7a91;
+      --card-bg:#ffffff;
+      --transition:.3s cubic-bezier(.3,.1,.18,1);
+      font-family: "Inter", system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--primary);text-decoration:none;}
+    img{display:block;max-width:100%;}
+
+    header{
+      background: linear-gradient(135deg,var(--primary) 0%, #194073 80%);
+      color:#fff;
+      padding:2rem 1rem;
+      position:relative;
+      overflow:hidden;
+    }
+    .site-inner{
+      max-width:1120px;
+      margin:0 auto;
+      padding:0 1rem;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-bottom:1rem;
+    }
+    .logo-group{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo-group img{
+      height:50px;
+      width:auto;
+      border-radius:6px;
+      background:#fff;
+      padding:4px;
+    }
+    .title-block{
+      flex:1;
+      min-width:220px;
+    }
+    .title-block h1{
+      margin:0;
+      font-size:1.85rem;
+      letter-spacing:0.5px;
+      font-weight:700;
+    }
+    .subtitle{
+      margin-top:6px;
+      font-size:1rem;
+      opacity:.9;
+    }
+    .badge{
+      display:inline-block;
+      margin-top:8px;
+      background-color:black  ;
+      padding:6px 14px;
+      font-weight:600;
+      border-radius:999px;
+      font-size:.75rem;
+      letter-spacing:1px;
+      color:#1d2939;
+    }
+
+    main{
+      padding:2rem 0 4rem;
+    }
+
+    .section{
+      margin-bottom:2.5rem;
+    }
+    .card{
+      background:var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:1.5rem 1.75rem;
+      position:relative;
+      overflow:hidden;
+      transition:transform var(--transition);
+    }
+    .card:hover{transform:translateY(-4px);}
+    h2{
+      margin-top:0;
+      font-size:1.6rem;
+      position:relative;
+    }
+    h2:after{
+      content:"";
+      display:block;
+      width:60px;
+      height:4px;
+      background: var(--accent);
+      border-radius:2px;
+      margin-top:6px;
+    }
+    .grid{
+      display:grid;
+      gap:1.5rem;
+    }
+    .services{
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+    .service-item{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .service-item .icon{
+      font-size:28px;
+      margin-bottom:6px;
+    }
+    .brands{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      align-items:center;
+      justify-content:center;
+      padding-top:6px;
+    }
+    .brand{
+      flex:0 0 120px;
+      background:#fff;
+      border-radius:10px;
+      padding:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 12px 28px rgba(31,71,136,0.08);
+      transition:transform var(--transition),filter var(--transition);
+    }
+    .brand img{
+      max-height:50px;
+      object-fit:contain;
+      filter:grayscale(30%);
+      transition:filter .25s;
+    }
+    .brand:hover{
+      transform:translateY(-2px);
+    }
+    .brand:hover img{
+      filter:none;
+    }
+
+    .gallery{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    }
+    .gallery img{
+      border-radius:10px;
+      object-fit:cover;
+      aspect-ratio:4/3;
+    }
+
+    .contact-wrapper{
+      display:flex;
+      gap:2rem;
+      flex-wrap:wrap;
+      width: fit-content;
+    }
+    .form-card{
+      flex:1 1 400px;
+      width: auto;
+    }
+    form{
+      display:grid;
+      gap:1rem;
+    }
+    .spread-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  line-height: 1.6;
+}
+
+.spread-contact .info-block p {
+  margin: 4px 0 0;
+}
+   
+    label{
+      display:flex;
+      flex-direction:column;
+      font-size:.85rem;
+      font-weight:500;
+      gap:6px;
+    }
+    input,textarea{
+      padding:12px 14px;
+      border:1px solid #d6dce9;
+      border-radius:8px;
+      font-size:1rem;
+      resize:vertical;
+      outline:none;
+      transition:box-shadow .2s,border .2s;
+    }
+    input:focus,textarea:focus{
+      border-color: var(--primary);
+      box-shadow:0 0 0 3px rgba(31,71,136,0.15);
+    }
+    .btn{
+      background: var(--accent);
+      border:none;
+      padding:14px 22px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:1rem;
+      letter-spacing:0.5px;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      transition:filter var(--transition);
+    }
+    .btn:hover{filter:brightness(1.05);}
+    .info{
+      flex:0 0 260px;
+      background:rgba(31,71,136,0.03);
+      border-radius:10px;
+      padding:16px 18px;
+      font-size:.95rem;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .info strong{display:block;margin-bottom:4px;}
+    .small{font-size:.75rem;color:var(--muted);}
+    .footer{
+      background:#1d2939;
+      color:#c3cbd9;
+      padding:2rem 1rem;
+    }
+    .footer-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.5rem;
+      justify-content:space-between;
+    }
+    .footer-col{
+      flex:1 1 220px;
+      min-width:180px;
+    }
+    .footer h3{
+      color:#fff;
+      font-size:1.1rem;
+      margin-bottom:8px;
+      font-weight:600;
+    }
+    .social{
+      display:flex;
+      gap:12px;
+      margin-top:6px;
+    }
+    .social a{
+      background:rgba(255,255,255,0.1);
+      padding:8px;
+      border-radius:6px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:36px;
+      height:36px;
+    }
+    .legal{
+      font-size:.65rem;
+      margin-top:12px;
+      opacity:.8;
+    }
+   
+        i {
+    margin-right: 8px;
+    color: #c02ab8;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+    @media (max-width:1000px){
+      .contact-wrapper{flex-direction:column;}
+    }
+
+    .slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  min-width: 100%;
+  object-fit: contain;
+  background: #fff;
+  max-height: 400px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(31, 71, 136, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(31, 71, 136, 0.9);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+
+</style>
+
+</head>
+<body>
+  <header>
+    <div class="site-inner">
+      <div class="nav">
+        <div class="logo-group">
+          <!-- Placeholder for your main logo -->
+          <img src="https://static.vecteezy.com/system/resources/previews/011/563/940/non_2x/ha-logo-ha-design-blue-and-red-ha-letter-ha-letter-logo-design-initial-letter-ha-linked-circle-uppercase-monogram-logo-vector.jpg" alt="HIM Anshu Injection Molding logo" />
+          <div class="title-block">
+            <br>
+            <h1>HIMANSHU INJECTION MOLDING (OPC) PVT LTD</h1>
+            <div class="subtitle">Injection molding, repair & automotive components for two-wheelers & cars</div>
+          </div>
+        </div>
+        <div class="badge">
+          <img src="https://blog.ipleaders.in/wp-content/uploads/2016/06/make-in-India-logo.jpg" alt="Make in India badge" style="height: 50px; width: auto; vertical-align: left;">
+          
+        </div>
+      </div>
+      <p style="margin-top:1rem;max-width:900px;">
+        Owned by Anshu Kumar, we provide precision manufacturing, repairing, assembling, and trading of parts
+        including headlight visors, mudguards, tail panels, side boxes, trims, and more for bikes, cars, ATVs, and heavy vehicles.
+      </p>
+    </div>
+  </header>
+
+  <main class="site-inner">
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="card">
+        <h2>Our Services</h2>
+        <div class="grid services" style="margin-top:1rem;">
+          <div class="service-item">
+            <div class="icon">🔧</div>
+            <h3>Manufacturing</h3>
+            <p>High-quality injection molded components: visors, panels, trims, and more for various vehicle types.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🛠</div>
+            <h3>Repair & Refurbish</h3>
+            <p>Restoration and repairing of damaged plastic and composite body parts for two-wheelers and automobiles.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🚚</div>
+            <h3>Trading & Export</h3>
+            <p>Importing, marketing, selling, and exporting automotive spare parts and accessories domestically and overseas.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🔄</div>
+            <h3>Assembly & Processing</h3>
+            <p>End-to-end assembling and processing of components for integration into customer vehicles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="section" id="brands">
+      <div class="card">
+        <h2>Brands We Work With</h2>
+        <div class="brands" aria-label="Partner and supported brand logos">
+          <!-- Replace src with real optimized SVG/PNG logos -->
+          <div class="brand"><img alt="Yamaha logo" src="https://static.vecteezy.com/system/resources/thumbnails/020/714/523/small/yamaha-logo-yamaha-icon-free-free-vector.jpg" /></div>
+          <div class="brand"><img alt="Honda logo" src="https://thumbs.dreamstime.com/b/honda-logo-dealership-signboard-against-blue-sky-close-up-honda-logo-name-dealership-signboard-clear-377889076.jpg" /></div>
+          <div class="brand"><img alt="Royal Enfield" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREF7zrrRcNJG1ZYUsUXRTueoGev7AifJPNGA&s" /></div>
+          <div class="brand"><img alt="Hero logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFNTfxtAxIqUgU7O65VSGsWn0XiE76FO69Fw&s" /></div>
+          <div class="brand"><img alt="Bajaj logo" src="https://www.shutterstock.com/image-vector/bajaj-brand-white-logo-blue-600nw-2384532921.jpg" /></div>
+          <div class="brand"><img alt="Suzuki logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Suzuki_logo_2025_%28vertical%29.svg/496px-Suzuki_logo_2025_%28vertical%29.svg.png?20250403214606" /></div>
+          <div class="brand"><img alt="KTM logo" src="https://cdn.worldvectorlogo.com/logos/ktm-logo-1.svg" /></div>
+          <div class="brand"><img alt="TVS logo" src="https://upload.wikimedia.org/wikipedia/ta/7/79/TVS_Motor_Company_Logo.png" /></div>
+          <div class="brand"><img alt="ferrari logo" src="https://i.pinimg.com/736x/f5/7a/cd/f57acd525c15fa16d7b23d29637847f6.jpg" /></div>
+          <div class="brand"><img alt="kawasaki logo" src="https://static.vecteezy.com/system/resources/previews/020/336/010/non_2x/kawasaki-logo-kawasaki-icon-free-free-vector.jpg" /></div>
+          <div class="brand"><img alt="Duccati" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Ducati_red_logo.PNG" /></div>
+          <!-- Add more as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <!-- Gallery -->
+<section class="section" id="gallery">
+  <div class="card">
+    <h2>Gallery</h2>
+    <div class="slider-container" style="margin-top:12px;">
+      <button class="slider-btn prev" onclick="moveSlide(-1)">‹</button>
+      <div class="slider" id="slider">
+        <img src="/asset/visor.jpg" alt="Visor sample" style="padding-top: 2rem;"/>
+        <img src="/asset/part.png" alt="part sample" style="padding-top: 2rem;"/>
+        <img src="/asset/nut.png" alt="part sample" style="padding-top: 2rem;"/>
+        <img src="/asset/side.png" alt="part sample" style="padding-top: 2rem;"/>
+        <img src="/asset/machine.png" alt="machine sample" style="padding-top: 2rem;"/>
+        <img src="/asset/work with.jpg" alt="Work photo" style="padding-top: 2rem;" />
+        <img src="/asset/everythimg.jpg" alt="Various parts"style="padding-top: 2rem;" />
+    <div style="
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 2rem;
+    justify-content: center;"
+    
+    >
+    
+    <div style="flex: 0 0 280px; text-align: center;">
+        <img 
+        src="/asset/owner.jpg" 
+        alt="Owner photo" 
+        style="
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        "
+        />
+    </div>
+    <div style="flex: 1; min-width: 240px;">
+        <h3 style="margin:0 0 8px;">Owner: Anshu Kumar</h3>
+        <p style="color:#6e7a91; font-size:0.95rem; margin:0;">
+        With years of experience in the automotive industry, Anshu Kumar leads Himanshu Injection Molding with a commitment to quality and innovation.
+        </p>
+    </div>
+    </div>
+
+
+      </div>
+      <button class="slider-btn next" onclick="moveSlide(1)">›</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="card">
+        <h2>Contact Us</h2>
+        <div class="info spread-contact">
+  <div class="info-block">
+    <strong>Owner:</strong>
+    <p>Anshu Kumar</p>
+  </div>
+  <div class="info-block">
+    <strong>Email:</strong>
+    <p><a href="mailto:himanshuinjectionmolding475@gmail.com" style="color: #ffb400;">himanshuinjectionmolding475@gmail.com</a></p>
+  </div>
+  <div class="info-block">
+    <strong>Phone:</strong>
+    <p><a href="tel:+919369224736" style="color: red;">+91 9369224736</a></p>
+  </div>
+  <div class="info-block">
+    <strong>Address:</strong>
+    <p>
+      Himanshu Injection Molding (OPC) Pvt. Ltd.<br>
+      Village Gurkhuli, Post Hinouti,<br>
+      Padari, NH-7, Pahadi Block,<br>
+      Mirzapur, Uttar Pradesh, 231001
+    </p>
+  </div>
+  <div class="info-block">
+    <strong>Business:</strong>
+    <p>
+      Injection molding, repairing, trading,<br>
+      and assembling parts for two-wheelers,<br>
+      cars, ATVs, and heavy vehicles.
+    </p>
+  </div>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>About</h3>
+        <p>Himanshu Injection Molding (OPC) Pvt. Ltd. specializes in producing and repairing automotive components with a focus on quality and breadth across vehicle types.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="#services" style="color: #ffb400;">Services</a><br /><a href="#brands" style="color: #ffb400;">Brands</a><br /><a href="#gallery" style="color: #ffb400;">Gallery</a><br /><a href="#contact" style="color: #ffb400;">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:Himanshuinjectionmolding@gmail.com" style="color:inherit;">Himanshuinjectionmolding@gmail.com</a><br />Owner: Anshu Kumar</p>
+        <p>
+            <a href="https://www.instagram.com/himanshu_injection?igsh=MXRuM2l4b2EwdHkxMg==" target="_blank">
+            <i class="fab fa-instagram"></i> himanshu_injection
+            </a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/share/1AxBBvWt6E/" target="_blank">
+            <i class="fab fa-facebook"></i> Himanshuinjectionmolding
+            </a>
+        </p>
+
+        <p>
+          <i class="fa-brands fa-whatsapp" style="color: green;"> +91 9369224736 </i>
+        </p>
+
+      </div>
+    </div>
+    <div class="site-inner" style="margin-top:1rem; text-align:center;">
+      <div class="legal">&copy; 2025 HIM Anshu Injection Molding (OPC) Pvt. Ltd. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+  // Existing contact form script
+  function handleSubmit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const status = document.getElementById('status');
+    status.textContent = 'Thanks! Message recorded. Please follow up via email: Himanshuinjectionmolding@gmail.com';
+    f.reset();
+  }
+
+  // Slider logic
+  let currentIndex = 0;
+  function moveSlide(direction) {
+    const slider = document.getElementById("slider");
+    const slides = slider.querySelectorAll("img");
+    const totalSlides = slides.length;
+
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
+
+</body>
+</html>
